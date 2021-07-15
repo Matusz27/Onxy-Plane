@@ -1,0 +1,243 @@
+
+
+$main-dark-color: #1B1B1B;
+$city-icon-color: 373737;
+
+
+*{
+	color: white;
+}
+
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+body,html{
+    height:100%
+}
+
+body{
+    margin: 0px;
+	overflow-y:hidden;
+	background-color: $main-dark-color;
+}
+
+.cover{	
+	position: absolute;
+	z-index: 999;
+	height: 100%;
+	width: 100%;
+    background-color: #111111;
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	cursor: default ;
+	
+	.innercover{
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: "Cormorant SC";
+		font-size: 72px;
+		letter-spacing: 7px;
+
+		span{
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+
+		h1{
+			margin:0px;
+			font-family:"Cormorant";
+			font-style: italic;
+			font-weight: 500;
+			font-size: 96px;
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+
+
+		#buttoncover{
+			font-size: 30px;
+			letter-spacing: 3px;
+			padding: 15px 30px;
+			margin-top: 30px;
+			border: white 2px solid;
+			transform: scale(0, 0);
+		}
+
+		#buttoncover:hover{
+			transform: scale(0.75, 0.75) !important;
+			border: white 2px solid;
+		}
+
+	}
+
+}
+
+#Uula-page{
+	display: none;
+}
+
+#Khan-page{
+	display: none;
+}
+
+#Onxy-page{
+	display: none;
+}
+
+#Orcius-page{
+	display: none;
+}
+
+.overlay{
+
+	position: absolute;
+	top: 0%;
+
+	.shadow{
+		background-color: rgba(0, 0, 0, 0.5);
+		width: 60%;
+		height: 100vh;
+	}
+
+	.discription{
+		width: 40%;
+		padding: 4% 5%;
+		padding-bottom: 0px;
+		background-color: $main-dark-color;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+
+		img{
+			object-fit: contain;
+			max-height: 30vh;
+			max-width: 30vw;
+			border: white 2px solid;
+		}
+
+		#dragon{
+			max-height: 25vh;
+		}
+
+		h2{
+			font-size: 3rem;
+			margin-bottom: 10px;
+			font-family:  'Dancing Script', cursive;
+			-webkit-text-stroke-width:	0.5px;
+  			-webkit-text-stroke-color: black;
+		}
+
+		p{
+			font-size: 1rem;
+			font-family:"Cormorant";
+		}
+	}
+}
+
+
+
+.map{
+	
+	display:block;
+	position: relative;
+	height: 100vh;
+	width: 1.33 * 100vh;
+	margin:auto;
+	background-image: url("/img/Map.webp");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	font-family: "Seaweed Script";
+	
+
+	h1{
+		margin: 0 auto;
+		width: 40%;
+		padding-top:3%;
+		cursor: pointer ;
+		text-align: center;
+		font-size: 40pt;
+		font-family: 'Dancing Script', cursive;
+		text-shadow: hsla(0, 0%, 0%, 0.5) 0px 4px 4px;
+		letter-spacing: 8px;
+		-webkit-text-stroke-width:	1px;
+  		-webkit-text-stroke-color: black;
+	}
+
+	.city-button{
+		transform: translateY(-100%);
+		opacity: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		text-decoration: none;
+		font-size: 22pt;
+		-webkit-text-stroke-width:	0.7px;
+  		-webkit-text-stroke-color: black;
+		cursor: pointer ;
+	}
+
+	.city-icon{
+		width:60px;
+		fill: #373737;
+	}
+
+	#KahnRa{
+		position:absolute; 
+		left:50%; 
+		bottom:30%;
+	}
+
+	#UulaDaal{
+		position:absolute; 
+		left:24%; 
+		top:34%;
+	}
+
+	#Orcius{
+		position:absolute; 
+		left:15%; 
+		bottom:33%;
+	}
+
+	.tooltip{
+
+		position: absolute;
+		opacity: 0;
+		transform: translateY(-100%);
+
+		img{
+			width:40px;
+			height:40px;
+		}
+
+		.tooltiptext {
+			opacity: 0;
+			visibility: hidden;
+			width: fit-content;
+			white-space: nowrap;
+			position:absolute;
+			top:-80%;
+			left:-60%;
+			background-color: rgba(196, 11, 11, 0.651);
+			color: rgb(255, 255, 255);
+			font-family: "Cormorant";
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 20px;
+			transition: 0.5s;
+		}
+	}
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+		opacity: 1;
+	}
+}

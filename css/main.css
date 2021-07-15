@@ -1,0 +1,270 @@
+* {
+  color: white;
+}
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  overflow-y: hidden;
+  background-color: #1B1B1B;
+}
+
+.cover {
+  position: absolute;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  background-color: #111111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  cursor: default;
+}
+
+.cover .innercover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Cormorant SC";
+  font-size: 72px;
+  letter-spacing: 7px;
+}
+
+.cover .innercover span {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.cover .innercover h1 {
+  margin: 0px;
+  font-family: "Cormorant";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 96px;
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.cover .innercover #buttoncover {
+  font-size: 30px;
+  letter-spacing: 3px;
+  padding: 15px 30px;
+  margin-top: 30px;
+  border: white 2px solid;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+}
+
+.cover .innercover #buttoncover:hover {
+  -webkit-transform: scale(0.75, 0.75) !important;
+          transform: scale(0.75, 0.75) !important;
+  border: white 2px solid;
+}
+
+#Uula-page {
+  display: none;
+}
+
+#Khan-page {
+  display: none;
+}
+
+#Onxy-page {
+  display: none;
+}
+
+#Orcius-page {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0%;
+}
+
+.overlay .shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 60%;
+  height: 100vh;
+}
+
+.overlay .discription {
+  width: 40%;
+  padding: 4% 5%;
+  padding-bottom: 0px;
+  background-color: #1B1B1B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay .discription img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 30vh;
+  max-width: 30vw;
+  border: white 2px solid;
+}
+
+.overlay .discription #dragon {
+  max-height: 25vh;
+}
+
+.overlay .discription h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: 'Dancing Script', cursive;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+.overlay .discription p {
+  font-size: 1rem;
+  font-family: "Cormorant";
+}
+
+.map {
+  display: block;
+  position: relative;
+  height: 100vh;
+  width: 133vh;
+  margin: auto;
+  background-image: url("/img/Map.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-family: "Seaweed Script";
+}
+
+.map h1 {
+  margin: 0 auto;
+  width: 40%;
+  padding-top: 3%;
+  cursor: pointer;
+  text-align: center;
+  font-size: 40pt;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 4px;
+  letter-spacing: 8px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.map .city-button {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22pt;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+  cursor: pointer;
+}
+
+.map .city-icon {
+  width: 60px;
+  fill: #373737;
+}
+
+.map #KahnRa {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+}
+
+.map #UulaDaal {
+  position: absolute;
+  left: 24%;
+  top: 34%;
+}
+
+.map #Orcius {
+  position: absolute;
+  left: 15%;
+  bottom: 33%;
+}
+
+.map .tooltip {
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.map .tooltip img {
+  width: 40px;
+  height: 40px;
+}
+
+.map .tooltip .tooltiptext {
+  opacity: 0;
+  visibility: hidden;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  position: absolute;
+  top: -80%;
+  left: -60%;
+  background-color: rgba(196, 11, 11, 0.651);
+  color: white;
+  font-family: "Cormorant";
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.map .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */
