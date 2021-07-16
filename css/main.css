@@ -172,6 +172,12 @@ body {
   font-family: "Seaweed Script";
 }
 
+.map .animatedMapElement {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+
 .map h1 {
   margin: 0 auto;
   width: 40%;
@@ -187,9 +193,6 @@ body {
 }
 
 .map .city-button {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,9 +236,6 @@ body {
 
 .map .tooltip {
   position: absolute;
-  opacity: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
 }
 
 .map .tooltip img {

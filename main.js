@@ -36,16 +36,12 @@ function addCoverEventandAnimation() {
     buttoncover.addEventListener("click", () => {
         buttoncover.style.cursor = "default";
         gsap.to("#cover", {
-            opacity: 0, duration: 0.75,
+            opacity: 0, duration: 0.5,
             onComplete() { 
                 cover.style.display = "none" 
-                gsap.to('.tooltip', { 
+                gsap.to('.animatedMapElement', { 
                     yPercent: 100, duration: 2,
                     opacity: 1, ease: "elastic.out(2,0.75)"})
-                gsap.to('.city-button', {
-                    yPercent: 100, duration: 2,
-                    opacity: 1, ease: "elastic.out(2,0.75)"
-                })
             }
         })
     });

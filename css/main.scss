@@ -156,6 +156,10 @@ body{
 	background-size: contain;
 	font-family: "Seaweed Script";
 	
+	.animatedMapElement{
+		transform: translateY(-100%);
+		opacity: 0;
+	}
 
 	h1{
 		margin: 0 auto;
@@ -172,8 +176,6 @@ body{
 	}
 
 	.city-button{
-		transform: translateY(-100%);
-		opacity: 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -211,8 +213,6 @@ body{
 	.tooltip{
 
 		position: absolute;
-		opacity: 0;
-		transform: translateY(-100%);
 
 		img{
 			width:40px;
