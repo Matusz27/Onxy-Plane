@@ -111,12 +111,16 @@ body {
 }
 
 .overlay .shadow {
+  opacity: 0;
   background-color: rgba(0, 0, 0, 0.5);
   width: 60%;
   height: 100vh;
 }
 
 .overlay .discription {
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   width: 40%;
   padding: 4% 5%;
   padding-bottom: 0px;
@@ -236,6 +240,8 @@ body {
 
 .map .tooltip {
   position: absolute;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .map .tooltip img {
@@ -259,8 +265,13 @@ body {
   text-align: center;
   border-radius: 6px;
   padding: 5px 20px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+
+.map .tooltip:hover {
+  -webkit-transform: translateY(-20%) !important;
+          transform: translateY(-20%) !important;
 }
 
 .map .tooltip:hover .tooltiptext {

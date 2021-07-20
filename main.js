@@ -26,7 +26,7 @@ const repeting = { opacity: 1, y: 0, ease: "power2.out" }
 tlstart.to("#wel", mergDict(repeting, { duration: 0.5 }))
     .to("#to", mergDict(repeting, { duration: 0.75 }))
     .to("#plane", mergDict(repeting, { duration: 1 }))
-    .to("#buttoncover", mergDict(repeting, {scale: 1,
+    .to("#buttoncover", mergDict(repeting, {scale: 1, 
         onComplete() {addCoverEventandAnimation();}}))
     .pause();
 
@@ -48,23 +48,26 @@ function addCoverEventandAnimation() {
 }
 
 const ids = {
-    "Orcius": "Orcius-page",
-    "OnxyText": "Onxy-page",
-    "KahnRa": "Khan-page",
-    "UulaDaal": "Uula-page"
+    "Orcius": ["Orcius-page", gsap.timeline()],
+    "OnxyText": ["Onxy-page", gsap.timeline()],
+    "KahnRa": ["Khan-page", gsap.timeline()],
+    "UulaDaal": ["Uula-page", gsap.timeline()]
 };
 
 for (let [button, page] of Object.entries(ids)) {
 
     button = document.getElementById(button);
-    page = document.getElementById(page);
+    PageElement = document.getElementById(page[0]);
+    shadowElement = PageElement.getElementsByClassName("shadow")[0]
+    pagetimeline = page[1].to(`#${page[0]} .shadow`, { opacity: 1, duration: 1, display: 'block'}, "displaycovercity")
+        .to(`#${page[0]} .discription`, { opacity: 1, duration: 1, x: 0, display: 'block' }, "displaycovercity")
+        .pause();
 
     button.addEventListener("click", () => {
-        page.style.display = "flex"
+        page[1].play()
     });
 
-    page.getElementsByClassName("shadow")[0].
-        addEventListener("click", () => {
-            page.style.display = "none"
-        });
+    shadowElement.addEventListener("click", () => {
+        page[1].reverse()
+    });
 };
