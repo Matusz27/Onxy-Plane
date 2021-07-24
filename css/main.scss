@@ -58,17 +58,7 @@ body{
 			letter-spacing: 3px;
 			padding: 15px 30px;
 			margin-top: 30px;
-			cursor: default;
 			border: white 2px solid;
-		}
-
-		.buttonLoaded{
-			cursor: pointer !important;
-			transition: 0.5s !important;
-		}
-
-		.buttonLoaded:hover{
-			transform: scale(0.75, 0.75) !important;
 		}
 
 	}
@@ -104,8 +94,6 @@ body{
 	}
 
 	.discription{
-		opacity: 0;
-		transform: translateX(100%);
 		width: 40%;
 		padding: 4% 5%;
 		padding-bottom: 0px;
@@ -156,10 +144,6 @@ body{
 	background-size: contain;
 	font-family: "Seaweed Script";
 	
-	.animatedMapElement{
-		transform: translateY(-100%);
-		opacity: 0;
-	}
 
 	h1{
 		margin: 0 auto;

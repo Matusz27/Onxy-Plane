@@ -69,19 +69,7 @@ body {
   letter-spacing: 3px;
   padding: 15px 30px;
   margin-top: 30px;
-  cursor: default;
   border: white 2px solid;
-}
-
-.cover .innercover .buttonLoaded {
-  cursor: pointer !important;
-  -webkit-transition: 0.5s !important;
-  transition: 0.5s !important;
-}
-
-.cover .innercover .buttonLoaded:hover {
-  -webkit-transform: scale(0.75, 0.75) !important;
-          transform: scale(0.75, 0.75) !important;
 }
 
 #Uula-page {
@@ -113,9 +101,6 @@ body {
 }
 
 .overlay .discription {
-  opacity: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
   width: 40%;
   padding: 4% 5%;
   padding-bottom: 0px;
@@ -169,12 +154,6 @@ body {
   background-position: center;
   background-size: contain;
   font-family: "Seaweed Script";
-}
-
-.map .animatedMapElement {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  opacity: 0;
 }
 
 .map h1 {
