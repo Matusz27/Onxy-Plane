@@ -44,19 +44,12 @@ body{
 		font-size: 72px;
 		letter-spacing: 7px;
 
-		span{
-			opacity: 0;
-			transform: translateY(-100%);
-		}
-
 		h1{
 			margin:0px;
 			font-family:"Cormorant";
 			font-style: italic;
 			font-weight: 500;
 			font-size: 96px;
-			opacity: 0;
-			transform: translateY(-100%);
 		}
 
 
@@ -65,13 +58,17 @@ body{
 			letter-spacing: 3px;
 			padding: 15px 30px;
 			margin-top: 30px;
+			cursor: default;
 			border: white 2px solid;
-			transform: scale(0, 0);
 		}
 
-		#buttoncover:hover{
+		.buttonLoaded{
+			cursor: pointer !important;
+			transition: 0.5s !important;
+		}
+
+		.buttonLoaded:hover{
 			transform: scale(0.75, 0.75) !important;
-			border: white 2px solid;
 		}
 
 	}
