@@ -68,7 +68,7 @@ body {
   font-size: 30px;
   letter-spacing: 3px;
   padding: 15px 30px;
-  margin-top: 30px;
+  margin-top: 50px;
   border: white 2px solid;
 }
 
@@ -89,20 +89,19 @@ body {
 }
 
 .overlay {
+  overflow: hidden;
   position: absolute;
   top: 0%;
-}
-
-.overlay .shadow {
-  opacity: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 60%;
   height: 100vh;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .overlay .discription {
   width: 40%;
-  padding: 4% 5%;
+  padding: 4% 3%;
   padding-bottom: 0px;
   background-color: #1B1B1B;
   display: -webkit-box;
@@ -123,7 +122,8 @@ body {
      object-fit: contain;
   max-height: 30vh;
   max-width: 30vw;
-  border: white 2px solid;
+  border: white 1px solid;
+  border-radius: 5px;
 }
 
 .overlay .discription #dragon {
@@ -141,6 +141,24 @@ body {
 .overlay .discription p {
   font-size: 1rem;
   font-family: "Cormorant";
+  overflow-y: auto;
+  max-height: 50vh;
+}
+
+.overlay .discription p::-webkit-scrollbar {
+  width: 5px;
+}
+
+.overlay .discription p::-webkit-scrollbar-track {
+  background: #47476b;
+  border-radius: 5px;
+}
+
+.overlay .discription p::-webkit-scrollbar-thumb {
+  background: #33334d;
+  border-radius: 5px;
+  height: 20px;
+  width: 2.5px;
 }
 
 .map {
@@ -168,6 +186,12 @@ body {
   letter-spacing: 8px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.map h1:hover {
+  color: #c40b0b;
 }
 
 .map .city-button {
@@ -214,8 +238,6 @@ body {
 
 .map .tooltip {
   position: absolute;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .map .tooltip img {
@@ -241,11 +263,6 @@ body {
   padding: 5px 20px;
   -webkit-transition: 0.75s;
   transition: 0.75s;
-}
-
-.map .tooltip:hover {
-  -webkit-transform: translateY(-20%) !important;
-          transform: translateY(-20%) !important;
 }
 
 .map .tooltip:hover .tooltiptext {

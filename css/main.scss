@@ -57,7 +57,7 @@ body{
 			font-size: 30px;
 			letter-spacing: 3px;
 			padding: 15px 30px;
-			margin-top: 30px;
+			margin-top: 50px;
 			border: white 2px solid;
 		}
 
@@ -83,19 +83,16 @@ body{
 
 .overlay{
 
+	overflow: hidden;
 	position: absolute;
 	top: 0%;
-
-	.shadow{
-		opacity: 0;
-		background-color: rgba(0, 0, 0, 0.5);
-		width: 60%;
-		height: 100vh;
-	}
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100vh;
+	justify-content:flex-end;
 
 	.discription{
 		width: 40%;
-		padding: 4% 5%;
+		padding: 4% 3%;
 		padding-bottom: 0px;
 		background-color: $main-dark-color;
 		display: flex;
@@ -107,7 +104,8 @@ body{
 			object-fit: contain;
 			max-height: 30vh;
 			max-width: 30vw;
-			border: white 2px solid;
+			border: white 1px solid;
+			border-radius: 5px;
 		}
 
 		#dragon{
@@ -125,6 +123,24 @@ body{
 		p{
 			font-size: 1rem;
 			font-family:"Cormorant";
+			overflow-y: auto;
+			max-height: 50vh;
+
+			&::-webkit-scrollbar {
+			width: 5px;
+			}
+
+			&::-webkit-scrollbar-track {
+			background: hsl(240, 20%, 35%);
+			border-radius: 5px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+			background: hsl(240, 20%, 25%);
+			border-radius: 5px;
+			height: 20px;
+			width: 2.5px;
+			}
 		}
 	}
 }
@@ -157,6 +173,11 @@ body{
 		letter-spacing: 8px;
 		-webkit-text-stroke-width:	1px;
   		-webkit-text-stroke-color: black;
+		transition: 0.5s;
+
+		&:hover{
+			color:#c40b0b;
+		}
 	}
 
 	.city-button{
@@ -197,7 +218,6 @@ body{
 	.tooltip{
 
 		position: absolute;
-		transition: 0.5s;
 
 		img{
 			width:40px;
@@ -220,10 +240,6 @@ body{
 			padding: 5px 20px;
 			transition: 0.75s;
 		}
-	}
-
-	.tooltip:hover{
-		transform: translateY(-20%) !important;
 	}
 
 	.tooltip:hover .tooltiptext {
