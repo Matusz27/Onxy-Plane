@@ -167,7 +167,7 @@ body {
   height: 100vh;
   width: 133vh;
   margin: auto;
-  background-image: url("/img/Map.webp");
+  background-image: url("../img/Map.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
