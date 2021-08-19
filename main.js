@@ -9,17 +9,26 @@
 
 const repeting = { opacity: 0, y: -100, ease: "power1.out" }
 let tlstart = gsap.timeline({ defaults: repeting });
+let tlend = gsap.timeline({ defaults: repeting })
 let mapload = gsap.timeline({ defaults: {opacity: 0}});
 
 let buttonHoverAnimation = gsap.timeline();
 let TooltipHoverAnimation = gsap.timeline();
 
 tlstart
-    .from("#wel", {duration: 0.5})
-    .from("#to", {duration: 0.6 })
-    .from("#plane", {duration: 0.7 })
+    .from("#wel", {duration: 0.4})
+    .from("#to", {duration: 0.5 })
+    .from("#plane", {duration: 0.6 })
     .from("#buttoncover", { y: 0, scale: 0})
     .eventCallback("onComplete", addCoverButtonEventandAnimation)
+    .pause();
+
+
+tlend
+    .to("#wel", { duration: 0.2, y: -400 }, '<')
+    .to("#to", { duration: 0.2, y: -400 }, '<.1')
+    .to("#plane", { duration: 0.2, y: -400 }, '<.1')
+    .to("#buttoncover", { y: 0, scale: 0 }, '<.1')
     .pause();
 
 mapload
@@ -48,7 +57,10 @@ function addCoverButtonEventandAnimation() {
     })
 
     buttoncover.addEventListener("click", () => {
-        mapload.play();
+        tlend.eventCallback("onComplete", () => {
+            mapload.play();
+        })
+        tlend.play();
     })
 }
 
