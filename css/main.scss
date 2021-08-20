@@ -54,11 +54,19 @@ body{
 
 
 		#buttoncover{
+			display: flex;
+			align-items: center;
 			font-size: 30px;
 			letter-spacing: 3px;
-			padding: 15px 30px;
-			margin-top: 50px;
+			padding: 0px 30px;
 			border: white 2px solid;
+		}
+
+		#bntcontiner{
+			margin-top: 50px;
+			height: 70px;
+			width: 250px;
+			display: flex;
 		}
 
 	}

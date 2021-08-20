@@ -39,14 +39,15 @@ mapload
     .pause();
 
 buttonHoverAnimation
-    .to('#buttoncover', { scale: 0.75, duration: 0.2, cursor: "pointer", ease: "power2.in" })
+    .to('#buttoncover', { scale: 0.75, duration: 0.2, cursor: "pointer", 
+        ease: "power1.in", color: 'black', backgroundColor: 'white'})
     .pause();
 
 
 
 function addCoverButtonEventandAnimation() {
 
-    const buttoncover = document.getElementById("buttoncover");
+    const buttoncover = document.getElementById("bntcontiner");
 
     buttoncover.addEventListener("mouseover", () => {
         buttonHoverAnimation.play();

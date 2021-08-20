@@ -65,11 +65,25 @@ body {
 }
 
 .cover .innercover #buttoncover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 30px;
   letter-spacing: 3px;
-  padding: 15px 30px;
-  margin-top: 50px;
+  padding: 0px 30px;
   border: white 2px solid;
+}
+
+.cover .innercover #bntcontiner {
+  margin-top: 50px;
+  height: 70px;
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #Uula-page {
@@ -167,7 +181,7 @@ body {
   height: 100vh;
   width: 133vh;
   margin: auto;
-  background-image: url("../img/Map.webp");
+  background-image: url("/img/Map.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -261,8 +275,8 @@ body {
   text-align: center;
   border-radius: 6px;
   padding: 5px 20px;
-  -webkit-transition: 0.75s;
-  transition: 0.75s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .map .tooltip:hover .tooltiptext {
